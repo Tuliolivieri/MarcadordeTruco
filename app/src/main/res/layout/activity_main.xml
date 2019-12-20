@@ -47,9 +47,10 @@
         android:text="-1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btMinusB"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.561"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTimeA" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeA"
+        app:layout_constraintVertical_bias="0.503" />
 
     <Button
         android:id="@+id/btMoreB"
