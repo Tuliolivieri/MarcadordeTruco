@@ -31,20 +31,28 @@ class MainActivity : AppCompatActivity()
 
         var btMinusB = btMinusB;
         btMinusB.setOnClickListener{minusB()};
+
+        var btZerar = btZerar;
+        btZerar.setOnClickListener{zerar()};
     }
 
     fun moreA()
     {
-        pontA = pontA + 1;
-        var tvTA = tvTimeA;
-        tvTA.text = pontA.toString();
+        if(pontA < 12)
+        {
+            pontA = pontA + 1;
+            var tvTA = tvTimeA;
+            tvTA.text = pontA.toString();
+        }
     }
 
     fun moreB()
     {
-        pontB = pontB + 1;
-        var tvTB = tvTimeB;
-        tvTB.text = pontB.toString();
+        if (pontB < 12) {
+            pontB = pontB + 1;
+            var tvTB = tvTimeB;
+            tvTB.text = pontB.toString();
+        }
     }
 
     fun minusA()
@@ -52,8 +60,7 @@ class MainActivity : AppCompatActivity()
         if(pontA > 0)
         {
             pontA = pontA - 1;
-            var tvTA = tvTimeA;
-            tvTA.text = pontA.toString();
+            tvTimeA.text = pontA.toString();
         }
     }
 
@@ -62,8 +69,17 @@ class MainActivity : AppCompatActivity()
         if(pontB > 0)
         {
             pontB = pontB - 1;
-            var tvTB = tvTimeB;
-            tvTB.text = pontB.toString();
+            tvTimeB.text = pontB.toString();
         }
+    }
+
+    fun zerar()
+    {
+        pontA = 0;
+        pontB = 0;
+
+        tvTimeA.text = pontA.toString();
+
+        tvTimeB.text = pontB.toString();
     }
 }
